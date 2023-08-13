@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="port.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <style>
+    /* sredtfyguijokpiuhy */
+    body{
+    background-color: rgb(40, 106, 150);
+}
+.portfolio{
+    background-color: rgb(40, 106, 150);
+}
+ .pic{
+    width: 700px;
+   
+    border-radius: 10%;
+ }
+.nav a {
+
+    font-size: large;
+    color: black;
+}
+.fs-1{
+    font-size: xx-large !important;
+    font-weight: bold;
+
+}
+    /*  */
+   
+.name{
+  color:rgb(224 224 224);
+}
+.body{
+  display: flex;
+  justify-content: space-around;
+}
+.left{
+  width: 50%;
+}
+.right{
+  width: 40%;
+  height: auto;
+}
+ 
+.header{
+  color: black;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+#element{
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.body{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0px;
+}
+    </style>
+</head>
+<body>
+<div class="portfolio">
+        <!-- navigation bar -->
+  <section>
+            <div class="">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <h1 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-1">BANDESHA</span>
+      </h1>
+      
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+    </header>
+  </div>
+  </section>
+        <!-- Body -->
+  <section>
+  <div class="container my-3 py-5">
+    <div class="body">
+      <div class="left my-5 py-5">
+          <h1 class=" header "> Hi, I'm  <span class="name">BANDESHA</span> </h1>
+          <span id="element"></span>                        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary  px-4 me-md-2">Resume</button>
+          <button type="button" class="btn btn-outline-light px-4">Github</button>
+        </div>
+      </div>
+      <div class="right">
+          <img src="./img/Daco_6122373.png" class=" pic d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+  </section>
+        <!-- Footer -->
+  <section>
+            <div class="">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 border-top">
+                               
+                  <ul class="nav col-md-4 justify-content-start list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-body-secondary" href="#" ><img src="./img/instagram (1).png" width="30px"></a></li>
+                    <li class="ms-3"><a class="text-body-secondary" href="#"><img src="./img/facebook (1).png" width="30px"></a></li>
+                    <li class="ms-3"><a class="text-body-secondary" href="#" ><img src="./img/twitter (2).png" width="30px"></a></li>
+                  </ul>
+                </footer>
+              </div>
+  </section>
+
+
+
+</div>
+
+
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- Element to contain animated typing -->
+
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Frontend Developer', 'Fullstack Developer', 'React Developer'],
+      typeSpeed: 40,
+    });
+  </script>
+</body>
+
+
+
+</body>
+</html>
