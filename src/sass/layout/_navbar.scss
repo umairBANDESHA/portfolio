@@ -1,0 +1,147 @@
+// Navigation Bar
+.navbar {
+   position: fixed;
+  top: 0;
+   left: 0;
+   width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 0;
+  // background-color: transparent;
+  transition: all 0.3s ease;
+  //    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  
+  
+  ;
+  // inset: 0;
+  
+  
+  
+  &.scrolled {
+    // background: transparent;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  }
+ 
+  .nav-container {
+    // max-width: 1200px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    
+  width: 80%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-left {
+    .nav-logo {
+      font-size: 2.0rem;
+      font-weight: 700;
+      color: $primary-color;
+      text-decoration: none;
+      position: relative;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: $primary-color;
+        transition: width 0.3s ease;
+      }
+      
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .nav-btn {
+      color: $primary-color;
+      padding: 0.6rem 1.5rem;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      background: transparent;
+      // color: $dark-grey;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      font-size: 1.4rem;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s ease;
+      }
+
+      &:hover {
+        color: $white-color;
+        // border-color: $primary-color;
+        transform: translateY(-2px);
+        // box-shadow: 0 4px 12px rgba($primary-color, 0.2);
+        
+        &::before {
+          left: 100%;
+        }
+      }
+
+      &.nav-btn-primary {
+        // background: $primary-color;
+        color: $primary-color;
+        // border-color: $primary-color;
+
+        &:hover {
+        //   background: darken($primary-color, 10%);
+        //   border-color: darken($primary-color, 10%);
+          color: $white-color;
+
+          transform: translateY(-2px);
+        //   box-shadow: 0 6px 20px rgba($primary-color, 0.3);
+        }
+      }
+    }
+  }
+
+  @include respond(phone) {
+    .nav-container {
+      padding: 0 1rem;
+    }
+
+    .nav-left .nav-logo {
+      font-size: 1.2rem;
+    }
+
+    .nav-right {
+      gap: 0.5rem;
+
+      .nav-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+// Add top margin to hero section to compensate for fixed navbar
+#hero {
+  padding-top: 100px; // Add padding instead of margin to work with existing styles
+}
