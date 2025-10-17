@@ -94,7 +94,7 @@
       }
 
       &:hover {
-        color: $white-color;
+        color: $secondary-color;
         // border-color: $primary-color;
         transform: translateY(-2px);
         // box-shadow: 0 4px 12px rgba($primary-color, 0.2);
@@ -112,7 +112,7 @@
         &:hover {
         //   background: darken($primary-color, 10%);
         //   border-color: darken($primary-color, 10%);
-          color: $white-color;
+          color: $secondary-color;
 
           transform: translateY(-2px);
         //   box-shadow: 0 6px 20px rgba($primary-color, 0.3);
