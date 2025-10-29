@@ -14,10 +14,25 @@
     <!-- Todo: improve your SEO by adding a small description of you -->
     <meta name="description" content="Umair Bandesha | Developer" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <!-- Font Awesome for general icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<!-- Devicon for technology stack icons -->
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+/>
+
+<!-- Remix Icon for modern icon set -->
+<link
+  href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+
     <link rel="stylesheet" href="./styles.scss" />
     <script
       defer
@@ -33,7 +48,7 @@
     <nav class="navbar">      
       <div class="nav-container">
         <div class="nav-left">
-          <a href="https://www.instagram.com/callme_bandesha" class="nav-logo">@umairBandesha</a>
+          <a href="" class="nav-logo">@umairBandesha</a>
         </div>
         <div class="nav-right">
           <a href="#projects"><button class="nav-btn">Projects</button></a>
@@ -66,18 +81,24 @@ s
       <div class="container">
         <h2 class="section-title load-hidden">About me</h2>
         <div class="row about-wrapper">
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__image load-hidden">
-              <img
-                alt="Profile Image"
-                class="img-fluid rounded shadow-lg"
-                height="auto"
-                width="300px"
-                src="/profilPic.jpg"
-              />
+          <!-- image -->
+          <div class="col-md-4 col-sm-12">
+          <div class="about-wrapper__image load-hidden"
+     style="width: 350px; height: 350px; border: 8px solid white; border-radius: 50%; 
+            overflow: hidden; display: inline-block; padding: 10px; background-color: transparent;">
+  <img
+    alt="Profile Image"
+    class="shadow-lg"
+    src="/ME.jpg"
+    style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
+  />
+</div>
+
+
             </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
+
+          <!-- about info -->
+          <div class="col-md-8 col-sm-12">
             <div class="about-wrapper__info load-hidden">
               <p class="about-wrapper__info-text">
                 I’m Tech-savvy and aspiring Full Stack Developer with a passion for designing efficient, scalable, and user-friendly applications. Skilled
@@ -86,7 +107,7 @@ databases. Experienced in creating responsive interfaces and smooth user experie
 Adept at integrating real-time features that enhance functionality and improve overall system performance. Demonstrated ability
 to design back-end systems and seamlessly connect them with intuitive front-end interfaces. Skilled at consuming and designing
 APIs, as well as incorporating third-party services to enrich applications with extended features.
-</p>
+              </p>
               <p class="about-wrapper__info-text">
                 I enjoy learning new technologies, solving real-world problems, and turning ideas into reliable, user-centered apps.
               </p>
@@ -106,22 +127,282 @@ APIs, as well as incorporating third-party services to enrich applications with 
       </div>
     </section>
     <!-- /END About Section -->
+<section id="services">
+  <div class="heading-container fade-up">
+    <h2 class="main-heading">What I Do</h2>
+  </div>
+
+  <div class="services-grid">
+    <!-- Mobile App Development -->
+    <div class="service-card" tabindex="0" data-service="mobile">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="icon-wrapper">
+            <i class="ri-smartphone-line"></i>
+          </div>
+          <h4 class="service-title">Mobile App Development</h4>
+          <p class="service-description">
+            I build high-performance cross-platform apps with smooth UI, scalable architecture, and robust backend integration.
+          </p>
+        </div>
+        <div class="card-back">
+          <h4 class="service-title">Mobile — Stack & Tools</h4>
+          <ul class="service-tech-list">
+            <li>Flutter & Dart / React Native</li>
+            <li>Provider / BLoC (State Management) / Redux</li>
+            <li>Firebase (Auth, Firestore, etc)</li>
+            <li>RESTful APIs / Third-Party Integrations</li>
+            <li>SQLite / Shared Preferences</li>
+            <li>Play Store Publishing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service: Web Development -->
+    <div class="service-card" tabindex="0" data-service="web">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="icon-wrapper">
+            <i class="ri-code-s-slash-line"></i>
+          </div>
+          <h4 class="service-title">Web Development</h4>
+          <p class="service-description">
+            I develop responsive and scalable web apps using the .NET ecosystem, modern frontend tech, and clean backend architecture.
+          </p>
+        </div>
+        <div class="card-back">
+          <h4 class="service-title">Web — Stack & Tools</h4>
+          <ul class="service-tech-list">
+            <li>ASP.NET Core MVC / Razor Pages</li>
+            <li>HTML5 / CSS3 / JavaScript (ES6+)</li>
+            <li>NodeJs / ExpressJs</li>
+            <li>React.js / Bootstrap </li>
+            <li>EF Core / ADO.NET / Migrations</li>
+            <li>SQL Server / MySQL / PostgreSQL</li>
+            <li>Git & GitHub for version control</li>
+            <li>Postman for API testing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service: AI Integration -->
+    <div class="service-card " tabindex="0" data-service="ai">
+      <div class="card-inner">
+        <!-- FRONT -->
+        <div class="card-front">
+          <div class="icon-wrapper">
+            <i class="ri-robot-line"></i>
+          </div>
+          <h4 class="service-title">AI Integration</h4>
+          <p class="service-description">
+            I implement intelligent features using modern AI frameworks, chatbots, and RAG systems for context-aware applications.
+          </p>
+        </div>
+        <!-- BACK -->
+        <div class="card-back">
+          <h4 class="service-title">AI — Stack & Tools</h4>
+          <ul class="service-tech-list">
+            <li>Model Context Protocol (MCP)</li>
+            <li>Semantic Kernel Framework</li>
+            <li>RAG (Retrieval Augmented Generation)</li>
+            <li>Vector Databases (ChromaDB)</li>
+            <li>Custom Chatbot Development</li>
+            <li>AI Agent Development</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- /END Sevices Section -->
+
+    <!-- Skills Section -->
+       <section id="skills" aria-label="Skills & Services">
+      <div class="container">
+        <h2 class="section-title ">Skills</h2>
+
+        <div class="services-scroller">
+          <ul class="services-track">
+            <li class="service-card">
+              <i class="devicon-flutter-plain colored"></i>
+              <span>Flutter</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-dart-plain colored"></i>
+              <span>Dart</span>
+            </li>
+            <li class="service-card">
+              <img src="/flutterflow.svg" alt="FlutterFlow" style="width: 40px; height: 40px;">
+              <span>Flutterflow</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-react-original colored"></i>
+              <span>React Native</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-html5-plain colored"></i>
+              <span>HTML5</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-css3-plain colored"></i>
+              <span>CSS3</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-javascript-plain colored"></i>
+              <span>JavaScript</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-nodejs-plain colored"></i>
+              <span>Node.js</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-express-original"></i>
+              <span>Express.js</span>
+            </li>
+             <li class="service-card">
+              <i class="devicon-mysql-plain colored"></i>
+              <span>MySQL</span>
+            </li>
+             <li class="service-card">
+              <i class="devicon-postgresql-plain colored"></i>
+              <span>PostgreSQL</span>
+            </li>
+             <li class="service-card">
+              <i class="devicon-sqlite-plain colored"></i>
+              <span>SQLite</span>
+           
+            <li class="service-card">
+              <i class="devicon-mongodb-plain colored"></i>
+              <span>MongoDB</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-firebase-plain colored"></i>
+              <span>Firebase</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-git-plain colored"></i>
+              <span>Git</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-github-original"></i>
+              <span>GitHub</span>
+            </li>
+            <li class="service-card">
+              <i class="fa fa-exchange"></i>
+              <span>REST APIs</span>
+            </li>
+            <li class="service-card">
+              <i class="fa fa-pencil-square-o"></i>
+              <span>UI/UX</span>
+            </li>
+            <li class="service-card">
+              <i class="fa fa-tasks"></i>
+              <span>Agile</span>
+            </li>
+<!-- REpeating from here to loop it -->
+            <li class="service-card">
+              <i class="devicon-flutter-plain colored"></i>
+              <span>Flutter</span>
+              <li class="service-card">
+                <i class="devicon-dart-plain colored"></i>
+                <span>Dart</span>
+              </li>
+            </li>
+             <li class="service-card">
+              <img src="/flutterflow.svg" alt="FlutterFlow" style="width: 40px; height: 40px;">
+              <span>Flutterflow</span>
+            </li>
+              <li class="service-card">
+                <i class="devicon-react-original colored"></i>
+                <span>React Native</span>
+              </li>
+            <li class="service-card">
+              <i class="devicon-html5-plain colored"></i>
+              <span>HTML5</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-css3-plain colored"></i>
+              <span>CSS3</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-javascript-plain colored"></i>
+              <span>JavaScript</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-nodejs-plain colored"></i>
+              <span>Node.js</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-express-original"></i>
+              <span>Express.js</span>
+            </li>
+           <li class="service-card">
+              <i class="devicon-mysql-plain colored"></i>
+              <span>MySQL</span>
+            </li>
+             <li class="service-card">
+              <i class="devicon-postgresql-plain colored"></i>
+              <span>PostgreSQL</span>
+            </li>
+             <li class="service-card">
+              <i class="devicon-sqlite-plain colored"></i>
+              <span>SQLite</span>
+           
+            <li class="service-card">
+              <i class="devicon-mongodb-plain colored"></i>
+              <span>MongoDB</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-firebase-plain colored"></i>
+              <span>Firebase</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-git-plain colored"></i>
+              <span>Git</span>
+            </li>
+            <li class="service-card">
+              <i class="devicon-github-original"></i>
+              <span>GitHub</span>
+            </li>
+            <li class="service-card">
+              <i class="fa fa-exchange"></i>
+              <span>REST APIs</span>
+            </li>
+            <li class="service-card">
+              <i class="fa fa-pencil-square-o"></i>
+              <span>UI/UX</span>
+            </li>
+            <li class="service-card">
+              <i class="fa fa-tasks"></i>
+              <span>Agile</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- /END Skills Section -->
 
     <!-- **** Projects Section **** -->
     <section id="projects">
       <div class="container">        
         <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>
-          
-          <!-- Project Filter Buttons -->
-          <div class="project-filters">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="live">Live Demos</button>
-            <button class="filter-btn" data-filter="source">Source Code</button>          </div>
 
-          <!-- Projects will be dynamically loaded here -->
-          
-        </div>
+            <h2 class="section-title ">Projects</h2>
+            <!-- Project Filter Buttons -->
+            <div class="project-filters header">
+              <button class="filter-btn active" data-filter="all">All Projects</button>
+              <button class="filter-btn" data-filter="live">Live Demos</button>
+              <button class="filter-btn" data-filter="source">Source Code</button>
+            </div>
+            <!-- Projects will be dynamically loaded here -->
+          </div>
       </div>
     </section>
     <!-- /END Projects Section -->
@@ -130,7 +411,7 @@ APIs, as well as incorporating third-party services to enrich applications with 
     <section id="contact">
       <div class="container">
         <h2 class="section-title">Contact</h2>
-        <div class="contact-wrapper load-hidden">
+        <div class="contact-wrapper ">
           <p class="contact-wrapper__text">Want to connect or discuss tech ideas?</p>
           <a
             rel="noreferrer"

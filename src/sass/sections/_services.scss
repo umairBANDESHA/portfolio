@@ -1,0 +1,266 @@
+#services {
+  background-color: $white-color;
+  color: $primary-color;
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+  
+  @include respond(phone) {
+    padding-bottom: 3rem;
+  }
+  
+  .heading-container {
+    text-align: center;
+    margin-bottom: 5rem;
+    
+    .subheading {
+      color: $primary-color;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .main-heading {
+      color: $dark-primary-color;
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 0;
+      
+      @include respond(phone) {
+        font-size: 3rem;
+      }
+    }
+  }
+  
+  .services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    perspective: 1000px;
+    
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  .service-card {
+    background: transparent;
+    border-radius: 12px;
+    // cursor: pointer;
+    position: relative;
+    perspective: 1000px; // ensure each card has its own 3D perspective
+    
+    
+    @include respond(phone) {
+      height: 400px;
+    }
+    
+    .card-inner {
+      position: relative;
+      width: 100%;
+    height: 450px;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+
+        @include respond(phone) {
+          height: 400px;
+        }
+
+    }
+    
+    // Flip on hover for desktop
+    @media (hover: hover) {
+      &:hover .card-inner {
+        transform: rotateY(180deg);
+      }
+    }
+    
+    // Flip on click for mobile
+    &.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .card-front,
+    .card-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 12px;
+      padding: 3.8rem 3rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      // Promote to own layer to avoid z-order bleed
+      transform: translateZ(0);
+
+
+    
+      
+      @include respond(phone) {
+        padding: 3rem 2rem;
+      }
+    }
+    
+    .card-front {
+      background: $white-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      
+      .icon-wrapper {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 2rem;
+        // background: rgba($primary-color, 0.1);
+         background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        
+        i {
+          font-size: 3.5rem;
+          // color: $primary-color;
+          color: $white-color;
+          transition: color 0.3s ease;
+        }
+      }
+      
+      .service-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $dark-blue-text;
+        margin-bottom: 1.5rem;
+        
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+      }
+      
+      .service-description {
+        font-size: 1.6rem;
+        color: $dark-grey;
+        line-height: 1.6;
+        margin: 0;
+        
+        @include respond(phone) {
+          font-size: 1.4rem;
+        }
+      }
+      // Make sure front is on top by default
+      z-index: 2;
+    }
+    
+    .card-back {
+      background: linear-gradient(135deg, $dark-primary-color 0%, darken($dark-primary-color, 10%) 100%);
+      color: $white-color;
+      transform: rotateY(180deg);
+      overflow-y: auto;
+      z-index: 1;
+      
+      .service-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $white-color;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid $white-color;
+
+        @include respond(phone) {
+          font-size: 1.8rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+      
+      .service-tech-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+          padding: 0.8rem 0;
+          border-bottom: 1px solid rgba($white-color, 0.1);
+          font-size: 1.5rem;
+          display: flex;
+          align-items: center;
+          text-align: left;     
+          justify-content: flex-start;
+          transition: all 0.2s ease;
+          
+          @include respond(phone) {
+            font-size: 1.4rem;
+            padding: 0.8rem 0;
+          }
+          
+          &:before {
+            content: '▹';
+            color: $white-color;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.8rem;
+          }
+          
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+    
+    // Hover effects for desktop
+    @media (hover: hover) {
+      &:hover .card-front {
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        
+        &::before {
+          transform: scaleX(1);
+        }
+        
+       
+      }
+    }
+
+    // When the card is flipped (via .flipped class) swap stacking so back appears above
+    &.flipped {
+      .card-front { z-index: 1; }
+      .card-back { z-index: 2; }
+    }
+  }
+  
+  // Custom scrollbar for card back
+.card-back {
+  overflow: hidden;
+}
+}

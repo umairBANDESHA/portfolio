@@ -9,6 +9,24 @@
     padding-top: 5rem;
   }
 
+
+  .header{
+    position: sticky;
+    top: 55px; // Stick to top of viewport
+    background-color: $white-color; // Prevent overlap from transparent backgrounds
+    z-index: 100;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  } 
+
+  @include respond(phone) {
+    .header{
+      top: 45px; // Adjust for smaller screens
+      padding: 1rem 0;
+    }
+  }
+
   .project-wrapper {
     margin-bottom: 15rem;
 
@@ -170,4 +188,5 @@
     }
 
   }
+
 }

@@ -9,7 +9,7 @@ export const projectsData = [
     fetch and sync data from IoT-enabled solar devices. Users receive alerts and performance insights to optimize 
     energy efficiency and maintenance schedules. With a clean and modern UI, SolarMate provides a reliable
     and user-friendly solution for solar energy monitoring across platforms.`,
-    technologies: ["Flutter", "Firebase", "REST API", "IoT"],
+    technologies: ["Flutter", "Firebase", "REST API", "Cloudinary"],
     image: "/solarmate.png",
     liveUrl: null, // null means no live demo
     sourceUrl: "https://github.com/umairBANDESHA/SolarMate",
@@ -37,7 +37,7 @@ export const projectsData = [
     description: `HiChat is a real-time chat app built with React Native that allows users to sign up, connect with friends, 
     and chat instantly. It features a clean, modern UI with smooth navigation and Firebase integration for 
     authentication and live messaging. Designed for fast and secure communication across devices.`,
-    technologies: ["React Native", "Firebase", "Real-time Chat"],
+    technologies: ["React Native", "SQLite", ],
     image: "/hichat.png",
     liveUrl: null,
     sourceUrl: "https://github.com/umairBANDESHA/Social-Chat-App",

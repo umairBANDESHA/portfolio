@@ -21,6 +21,8 @@ function initNavigation() {
       });
     }
 
+
+    
     // Projects button - scroll to projects section
     const projectsBtn = document.querySelector('.nav-btn:not(.nav-btn-primary)');
     if (projectsBtn) {
@@ -59,7 +61,35 @@ function initNavbarScrollEffect() {
   });
 }
 
-// Dynamic project rendering
+
+//   document.addEventListener('DOMContentLoaded', () => {
+//   const serviceCards = document.querySelectorAll('.service-card');
+
+//   serviceCards.forEach(card => {
+//     card.addEventListener('click', () => {
+//       card.classList.toggle('expanded');
+//     });
+//   });
+// });
+
+
+document.querySelectorAll('.service-card').forEach(card => {
+  card.addEventListener('click', function() {
+    if (window.matchMedia('(hover: none)').matches) {
+      this.classList.toggle('flipped');
+    }
+  });
+
+  card.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      this.classList.toggle('flipped');
+    }
+  });
+});
+
+
+   // Dynamic project rendering
 function renderProjects() {
   const projectsContainer = document.querySelector('.project-wrapper');
   if (!projectsContainer) return;

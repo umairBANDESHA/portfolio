@@ -1,0 +1,88 @@
+#skills {
+  background-color: $white-color;
+  color: $white-color;
+  background-image: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );
+
+
+  padding: 4rem 0;
+
+    overflow-x: hidden; // 🛑 Prevent unwanted horizontal scroll
+
+  .services-track-wrapper {
+    overflow-x: auto; // ✅ Allow horizontal scroll inside
+    -webkit-overflow-scrolling: touch; // ✅ Smooth scrolling on iOS
+    padding: 2rem 0;
+
+    // optional: hide scrollbar if you want
+    scrollbar-width: none; // Firefox
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari
+    }
+  }
+
+  
+  
+  .services-track {
+  display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    width: max-content;
+    animation: services-loop 60s linear infinite;
+    padding: 2rem;
+
+    @media (hover: hover) {
+      &:hover {
+        animation-play-state: paused; // pause on hover
+      }
+    }
+  }
+
+  // Skill card styling
+  .service-card {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    background: $white-color;
+    color: $primary-color;
+    padding: 0.85rem 1rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    min-width: 170px;
+    white-space: nowrap;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+
+    i {
+      font-size: 3.4rem;
+      line-height: 1;
+    }
+
+    span {
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+    }
+  }
+
+  // Seamless loop: track contains items duplicated 2x, so -50% aligns start and end
+  @keyframes services-loop {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+  // Respect reduced motion
+  @media (prefers-reduced-motion: reduce) {
+    .services-track { animation: none; }
+  }
+}
