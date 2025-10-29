@@ -101,7 +101,7 @@
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
       border-radius: 12px;
-      padding: 3.8rem 3rem;
+      padding: 3.5rem 3rem;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       // Promote to own layer to avoid z-order bleed
       transform: translateZ(0);
@@ -193,7 +193,7 @@
         font-size: 2rem;
         font-weight: 700;
         color: $white-color;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         padding-bottom: 1rem;
         border-bottom: 2px solid $white-color;
 
@@ -209,7 +209,7 @@
         margin: 0;
         
         li {
-          padding: 0.8rem 0;
+          padding: 0.7rem 0;
           border-bottom: 1px solid rgba($white-color, 0.1);
           font-size: 1.5rem;
           display: flex;
