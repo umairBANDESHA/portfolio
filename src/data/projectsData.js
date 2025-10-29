@@ -9,7 +9,7 @@ export const projectsData = [
     fetch and sync data from IoT-enabled solar devices. Users receive alerts and performance insights to optimize 
     energy efficiency and maintenance schedules. With a clean and modern UI, SolarMate provides a reliable
     and user-friendly solution for solar energy monitoring across platforms.`,
-    technologies: ["Flutter", "Firebase", "REST API", "IoT"],
+    technologies: ["Flutter", "Firebase", "REST API"],
     image: "/solarmate.png",
     liveUrl: null, // null means no live demo
     sourceUrl: "https://github.com/umairBANDESHA/SolarMate",
