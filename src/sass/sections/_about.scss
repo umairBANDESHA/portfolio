@@ -30,10 +30,20 @@
       justify-content: center;
       margin-right: 15px;
 
+
+      // width: 350px; 
+      // height: 350px; 
+      // border: 8px solid white; 
+      // border-radius: 50%; 
+      // overflow: hidden; 
+      // display: inline-block; 
+      // padding: 10px; 
+      // background-color: transparent;
+
       
 
       @include respond(phone) {
-        height: 100%;
+        // height: 100%;
         margin-bottom: 25px;
       }
       @include respond(tab-land) {
@@ -57,9 +67,11 @@
 
       &-text {
         text-align: left;
+        margin-left: 35px;
 
         @include respond(tab-port) {
-          text-align: left;
+          text-align: center;
+       
         }
         @include respond(tab-port-sm) {
           text-align: center;
