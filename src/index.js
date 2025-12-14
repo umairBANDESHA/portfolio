@@ -123,8 +123,8 @@ function createProjectHTML(project) {
     : `<a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero disabled" href="#!">See Live</a>`;
 
   const sourceButton = project.sourceUrl
-    ? `<a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="${project.sourceUrl}">Source Code</a>`
-    : `<a rel="noreferrer" target="_blank" class="cta-btn text-color-main disabled" href="#!">Source Code</a>`;
+    ? `<a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="${project.sourceUrl}">Github</a>`
+    : `<a rel="noreferrer" target="_blank" class="cta-btn text-color-main disabled" href="#!">Github</a>`;
 
   const technologies = project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('');
 
